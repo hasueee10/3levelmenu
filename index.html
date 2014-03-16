@@ -7,7 +7,101 @@
 		<script src ="http://ie7-js.googlecode.com/svn/version/2.1(beta2)/IE8.js"></script>
 	<![endif]-->
 
-	
+	<style>
+		body {
+		 font-family: helvetica, arial, sans-serif;
+		 background: #e3e3e3;
+		 color: #2a0d65;
+		 /*text-align: center;*/
+		}
+
+		/* MENU */
+
+		#nav {
+		 background: #e5e5e5;
+		 float: left;
+		 margin: 0; padding: 0;
+		 border: 1px solid white;
+		 border-bottom: none;
+		}
+		#nav li a, #nav li {
+		 float: left;
+		}
+		#nav li {
+		 list-style: none;
+		 position: relative;
+		}
+		#nav li a {
+		 padding: 1em 2em;
+		 text-decoration: none;
+		 color: white;
+		 background: #292929;
+		 background: -moz-linear-gradient(top, black, #3c3c3c 1px, #292929 25px);
+		 background: -webkit-gradient(linear, left top, left 25, from(black), color-stop(4%, #3c3c3c), to(#292929));
+		 border-right: 1px solid #3c3c3c;
+		 border-left: 1px solid #292929;
+		 border-bottom: 1px solid #232323;
+		 border-top: 1px solid #545454;
+		}
+		#nav li a:hover {
+		 background: #2a0d65;
+		 background: -moz-linear-gradient(top, #11032e, #2a0d65);
+		 background: -webkit-gradient(linear, left top, left bottom, from(#11032e), to(#2a0d65));
+		}
+
+
+		/* Submenu */
+
+		.arrow-down {
+			position: absolute;
+			top: 25px;
+			right: 18px;
+
+			width: 0; 
+			height: 0; 
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-top: 5px solid #fff;
+			z-index: 100;
+		}
+		.arrow-right {
+			position: absolute;
+			top: 23px;
+			right: 45px;
+
+			width: 0; 
+			height: 0; 
+			border-top: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid #fff;
+			z-index: 100;
+		}
+		#nav li ul {
+		 display: none;
+		 position: absolute;
+		 left: 0;
+		 top: 100%;
+		 padding: 0; margin: 0;
+		}
+		#nav li:hover > ul {
+		 display: block;
+		}
+		#nav li ul li {
+		 _display: inline; for IE6
+		} 
+
+		#nav li ul li a {
+		 width: 150px;
+		 display: block;
+		}
+
+		/* SUBSUB Menu */
+
+		#nav li ul li:hover ul {
+		 left: 100%;
+		 top: 0;
+		}
+	</style>
 </head>
 <body>
 	<h1>Build a 3 level Navbar with HTML & CSS3</h1>
